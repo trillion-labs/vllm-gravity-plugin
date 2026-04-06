@@ -1,0 +1,18 @@
+[project]
+name = "vllm-gravity-plugin"
+version = "0.1.0"
+description = "vLLM plugin for Trillion Labs Gravity-MoE models"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = ["vllm>=0.8.0"]
+
+[project.entry-points."vllm.general_plugins"]
+gravity_moe = "vllm_gravity_plugin:register"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
