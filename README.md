@@ -18,7 +18,7 @@ Once installed, vLLM automatically discovers the plugin. No additional configura
 from vllm import LLM, SamplingParams
 
 llm = LLM(
-    model="trillion-labs/Gravity-MoE-16.2B-A3.2B",
+    model="trillionlabs/Gravity-16B-A3B-Base",
     trust_remote_code=True,
     dtype="bfloat16",
 )
@@ -33,7 +33,7 @@ for output in outputs:
 ### Serving
 
 ```bash
-vllm serve trillion-labs/Gravity-MoE-16.2B-A3.2B \
+vllm serve trillionlabs/Gravity-16B-A3B-Base \
     --trust-remote-code \
     --dtype bfloat16
 ```
@@ -46,7 +46,8 @@ Gravity-MoE shares the same underlying architecture as DeepSeek V3 (MLA attentio
 
 | Model | HuggingFace |
 |---|---|
-| Gravity-MoE-16.2B-A3.2B | [trillion-labs/Gravity-MoE-16.2B-A3.2B](https://huggingface.co/trillion-labs/Gravity-MoE-16.2B-A3.2B) |
+| Gravity-16B-A3B-Base | [trillionlabs/Gravity-16B-A3B-Base](https://huggingface.co/trillionlabs/Gravity-16B-A3B-Base) |
+| Gravity-16B-A3B-Preview | [trillionlabs/Gravity-16B-A3B-Preview](https://huggingface.co/trillionlabs/Gravity-16B-A3B-Preview) |
 
 ## License
 
